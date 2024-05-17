@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="Chatbot UI" content="Hyperskill project chatbot with basic UI" />
+  <meta charset="utf-8">
+  <title>Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Tom abrahams">
+  <link rel="stylesheet" href="style.css">
+  <script src="chatbot.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Welkom bij onze chatbot</h1>
+    </div>
+  
+    <div class="container">
+        <h3>Laten we kennismaken...</h3>
+        <p>Geef je naam in:</p>
+        <input id="name" type="text" placeholder="Naam"/>
+
+        <!-- Say hello -->
+        <p id="greetings"></p>
+    </div>
+
+    <div class="container">
+        <h3>Laten zien wat ik kan...</h3>
+        <p>Geef een getal in. Wij tellen vervolgens vanaf dit getal af tot 0:</p>
+        <input id="countdown_number" type="number" placeholder="Getal"/>
+        
+        <!-- Count down -->
+        <p id="countdown"></p> 
+    </div>
+
+    <div class="container">
+        <h3>Ik ga je leeftijd proberen te raden.</h3>
+        <div>
+            <p><strong>Hiervoor gaan we je leeftijd delen door 3, 5 en 7 en moet je telkens ingeven hoeveel er "over schiet".</strong></p>
+            <p>Voorbeeld: 21 / 3 = 7 en er schiet niets over</p>
+            <p>Voorbeeld: 22 / 3 = 7 en er schiet 1 over</p>
+            <p>Voorbeeld: 23 / 3 = 7 en er schiet 2 over</p>
+        </div>
+        <p>Hoeveel schiet er over als we delen door 3?</p>
+        <input id="rem3" type="number" placeholder="Overschot /3"/>
+
+        <p>Hoeveel schiet er over als we delen door 5?</p>
+        <input id="rem5" type="number" placeholder="Overschot /5"/>
+
+        <p>Hoeveel schiet er over als we delen door 7?</p>
+        <input id="rem7" type="number" placeholder="Overschot /7"/>
+        
+        <br/> 
+        <br/>
+        
+        <button id="guess_age" type="button">Raad mijn leeftijd</button>
+
+        <!-- Show age -->
+        <p id="age">Jouw leeftijd is: </p>
+    </div>
+
+</body>
+</html>
