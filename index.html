@@ -8,7 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Tom abrahams">
   <link rel="stylesheet" href="style.css">
-  <script src="chatbot.js"></script>
+    <!-- 
+    Is async a good option? 
+    If not, get "TypeError: Cannot read properties of null (reading 'addEventListener')" because it runs before the HTML is loaded.
+    Alternative is to add the script tag just before closing the body.
+    -->
+  <script async src="chatbot.js"></script> 
 </head>
 
 <body>
@@ -17,24 +22,26 @@
         <h1>Welkom bij onze chatbot</h1>
     </div>
   
+    <!-- 1. GREETINGS -->
     <div class="container">
         <h3>Laten we kennismaken...</h3>
         <p>Geef je naam in:</p>
-        <input id="name" type="text" placeholder="Naam"/>
-
+        <input id="name_input" type="text" placeholder="Naam"/>
         <!-- Say hello -->
         <p id="greetings"></p>
     </div>
 
+    <!-- 2. COUNT DOWN -->
     <div class="container">
         <h3>Laten zien wat ik kan...</h3>
         <p>Geef een getal in. Wij tellen vervolgens vanaf dit getal af tot 0:</p>
         <input id="countdown_number" type="number" placeholder="Getal"/>
         
         <!-- Count down -->
-        <p id="countdown"></p> 
+        <p id="counter"></p> 
     </div>
 
+    <!-- 3. GUESS AGE-->
     <div class="container">
         <h3>Ik ga je leeftijd proberen te raden.</h3>
         <div>
@@ -58,8 +65,7 @@
         <button id="guess_age" type="button">Raad mijn leeftijd</button>
 
         <!-- Show age -->
-        <p id="age">Jouw leeftijd is: </p>
+        <p id="age_guess">Jouw leeftijd is: </p>
     </div>
-
 </body>
 </html>
